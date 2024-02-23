@@ -4,16 +4,19 @@
 			<view class="header-logo"></view>
 			<view class="header-title">Please choose your option！</view>
 		</view>
+		
+		<view id="scanArea"></view>
 		<view class="content-body">
 			<view class="nav-box">
 				<ul>
 					<li class="nav-item" @click="signIn"></li>
 					<li class="nav-item" @click="showTips('guardHouse')"></li>
 					<li class="nav-item" @click="goRegisterPage"></li>
-					<li class="nav-item" @click="scanCode"></li>
+					<li class="nav-item" @click="scanCodeWithFrontCamera"></li>
 				</ul>
 			</view>
 		</view>
+		
 		<view class="content-footer">
 			<p>Kowloon Bay Campus</p>
 		</view>
@@ -57,6 +60,11 @@
 			});
 		},
 		methods: {
+			scanCodeWithFrontCamera() {
+				uni.navigateTo({
+					url:'/pages/scancode/scancode'
+				})
+			},
 			signIn:function(){
 				uni.navigateTo({
 					url:'/pages/signin/signin',
@@ -256,5 +264,9 @@
 		.popup-text{
 			font-size: 38px;
 		}
+	}
+	::v-deep .uni-popup__wrapper{
+		width: 100%;
+		height: 100%;
 	}
 </style>

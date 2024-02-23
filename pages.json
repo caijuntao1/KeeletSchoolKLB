@@ -29,6 +29,14 @@
 				},
 				"disableScroll":true
 			}
+		},
+		{
+			"path" : "pages/scancode/scancode",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {

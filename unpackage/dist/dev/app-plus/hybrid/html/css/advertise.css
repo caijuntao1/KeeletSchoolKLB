@@ -33,7 +33,7 @@ body {
 	position: fixed;
 	top: 40px;
 	right: 10px;
-	display: none;
+	/* display: none; */
 }
 
 #info {
